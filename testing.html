@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WireLab - Virtual Electrical Training</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="lab-page">
+<header class="site-header">
+    <div class="header-content">
+        <h1>WireLab</h1>
+        <p> Virtual Electrical Training </p>
+    </div>
+
+    <nav class="site-navigation">
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="labs.html" class="nav-button">Labs</a>
+        <a href="study.html" class="nav-button">Study</a>
+        <a href="info.html" class="nav-button">Solar</a>
+        <a href="solarlab.html" class="nav-button">..testing</a>
+        <a href="electrical-tools.html" class="nav-button">Tools</a>
+    </nav>
+    
+    <div class="stage-label"> TESTING </div>
+</header>
+
+<!-- ============= HERO SECTION ============== -->
+<section class="wirelab-hero">
+
+<img src="wirelab-testing-art.png"
+    alt="WireLab Home">
+
+<div class="hero-overlay">
+    <h2> website testing.. </h2>
+
+    <p> testing mode..</p>
+        <div class="labs-feature-detail"> </div>
+
+                <div class="labs-feature-detail">
+
+                    <h3>
+                        Project Management
+                    </h3>
+
+                    <p>
+                        Developing new functions..
+                    </p>
+
+                </div>
+    
+</div>
+
+</section>
+
+<!-- =========================================================
+     ELECTRICAL WORK AREA
+========================================================= -->
+
+<main class="page-container">
+
+```
+<!-- =====================================================
+     ELECTRICAL WORK SECTION
+====================================================== -->
+
+<section class="electrical-work-section">
+
+
+    <!-- =================================================
+         WORK AREA HEADER
+    ================================================== -->
+
+    <div class="electrical-work-header">
+
+
+        <!-- =============================================
+             TITLE
+        ============================================== -->
+
+        <div>
+
+            <h2>
+                Electrical Work Area
+            </h2>
+
+            <p>
+                Build and connect your electrical circuit.
+            </p>
+
+        </div>
+
+
+        <!-- =============================================
+             WORK AREA CONTROLS
+        ============================================== -->
+
+        <div class="electrical-work-controls">
+
+
+            <button
+                type="button"
+                id="addBox"
+                class="work-button"
+            >
+                + Add Junction Box
+            </button>
+
+
+            <button
+                type="button"
+                id="removeBox"
+                class="work-button"
+            >
+                Remove Selected
+            </button>
+
+
+            <button
+                type="button"
+                id="resetLab"
+                class="work-button reset-button"
+            >
+                Reset Lab
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         ELECTRICAL WORKSPACE
+    ================================================== -->
+
+    <div class="electrical-workspace">
+
+
+        <!-- =============================================
+             ELECTRICAL TOOLBOX
+        ============================================== -->
+
+        <aside
+            id="toolbox"
+            class="electrical-toolbox"
+        >
+
+
+            <!-- =========================================
+                 TOOLBOX HEADER
+            ========================================== -->
+
+            <div class="toolbox-header">
+
+                <h3>
+                    Electrical Components
+                </h3>
+
+                <p>
+                    Drag components into the work area.
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 JUNCTION BOX
+            ========================================== -->
+
+            <div
+                class="component toolbox-component"
+                data-component="junction-box"
+                draggable="true"
+            >
+
+                <div class="component-icon">
+                    J
+                </div>
+
+
+                <div class="component-information">
+
+                    <strong>
+                        Junction Box
+                    </strong>
+
+                    <span>
+                        Electrical box
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 14/2 NMB CABLE
+            ========================================== -->
+
+            <div
+                class="component toolbox-component"
+                data-component="14-2-nmb"
+                draggable="true"
+            >
+
+                <div class="component-icon">
+                    2
+                </div>
+
+
+                <div class="component-information">
+
+                    <strong>
+                        14/2 NMB
+                    </strong>
+
+                    <span>
+                        14/2 wire cable
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 14/3 NMB CABLE
+            ========================================== -->
+
+            <div
+                class="component toolbox-component"
+                data-component="14-3-nmb"
+                draggable="true"
+            >
+
+                <div class="component-icon">
+                    3
+                </div>
+
+
+                <div class="component-information">
+
+                    <strong>
+                        14/3 NMB
+                    </strong>
+
+                    <span>
+                        14/3 wire cable
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 DUPLEX RECEPTACLE
+            ========================================== -->
+
+            <div
+                class="component toolbox-component"
+                data-component="duplex-receptacle"
+                draggable="true"
+            >
+
+                <div class="component-icon">
+                    R
+                </div>
+
+
+                <div class="component-information">
+
+                    <strong>
+                        Duplex Receptacle
+                    </strong>
+
+                    <span>
+                        Standard receptacle
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 HALF-HOT RECEPTACLE
+            ========================================== -->
+
+            <div
+                class="component toolbox-component"
+                data-component="half-hot-receptacle"
+                draggable="true"
+            >
+
+                <div class="component-icon">
+                    HH
+                </div>
+
+
+                <div class="component-information">
+
+                    <strong>
+                        Half-Hot Receptacle
+                    </strong>
+
+                    <span>
+                        Split receptacle
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 GFCI RECEPTACLE
+            ========================================== -->
+
+            <div
+                class="component toolbox-component"
+                data-component="gfci"
+                draggable="true"
+            >
+
+                <div class="component-icon">
+                    G
+                </div>
+
+
+                <div class="component-information">
+
+                    <strong>
+                        GFCI Receptacle
+                    </strong>
+
+                    <span>
+                        Ground-fault protection
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 SINGLE-POLE SWITCH
+            ========================================== -->
+
+            <div
+                class="component toolbox-component"
+                data-component="single-pole-switch"
+                draggable="true"
+            >
+
+                <div class="component-icon">
+                    S
+                </div>
+
+
+                <div class="component-information">
+
+                    <strong>
+                        Single-Pole Switch
+                    </strong>
+
+                    <span>
+                        Single-pole switch
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 LIGHT FIXTURE
+            ========================================== -->
+
+            <div
+                class="component toolbox-component"
+                data-component="light-fixture"
+                draggable="true"
+            >
+
+                <div class="component-icon">
+                    L
+                </div>
+
+
+                <div class="component-information">
+
+                    <strong>
+                        Light Fixture
+                    </strong>
+
+                    <span>
+                        Electrical light fixture
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 LIGHT BULB
+            ========================================== -->
+
+            <div
+                class="component toolbox-component"
+                data-component="light-bulb"
+                draggable="true"
+            >
+
+                <div class="component-icon">
+                    💡
+                </div>
+
+
+                <div class="component-information">
+
+                    <strong>
+                        Light Bulb
+                    </strong>
+
+                    <span>
+                        Test light
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 3-PRONG APPLIANCE POWER CORD
+            ========================================== -->
+
+            <div
+                class="component toolbox-component"
+                data-component="appliance-power-cord"
+                draggable="true"
+            >
+
+                <div class="component-icon">
+                    ⏚
+                </div>
+
+
+                <div class="component-information">
+
+                    <strong>
+                        3-Prong Appliance Cord
+                    </strong>
+
+                    <span>
+                        Hot / neutral / ground
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =============================================
+             ELECTRICAL WORKBOARD
+        ============================================== -->
+
+        <section
+            id="workboard"
+            class="electrical-workboard"
+        >
+
+
+            <!-- =========================================
+                 WORKBOARD HEADER
+            ========================================== -->
+
+            <div class="workboard-header">
+
+
+                <div>
+
+                    <h3>
+                        Circuit Work Area
+                    </h3>
+
+                    <p>
+                        Place and connect electrical components.
+                    </p>
+
+                </div>
+
+
+                <!-- =====================================
+                     LAB MESSAGE
+                ====================================== -->
+
+                <div
+                    id="message"
+                    class="workboard-message"
+                >
+
+                    Electrical work area ready.
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 CABLE LAYER
+            ========================================== -->
+
+            <div
+                id="cableLayer"
+                class="cable-layer"
+            ></div>
+
+
+
+            <!-- =========================================
+                 JUNCTION BOX LAYER
+            ========================================== -->
+
+            <div
+                id="junctionBoxes"
+                class="junction-boxes-layer"
+            ></div>
+
+
+
+            <!-- =========================================
+                 POWER CORD LAYER
+            ========================================== -->
+
+            <div
+                id="powerCordLayer"
+                class="power-cord-layer"
+            ></div>
+
+
+        </section>
+
+
+    </div>
+
+
+</section>
+```
+
+</main>
+
+<!-- =========================================================
+     ELECTRICAL WORK AREA JAVASCRIPT
+========================================================= -->
+
+<script src="script2.js"></script>
+
+</body>
+
+</html>

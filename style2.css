@@ -1,0 +1,941 @@
+/* =========================================================
+   WIRELAB
+   ELECTRICAL VALUES
+   INTERACTIVE WIDGETS
+========================================================= */
+
+
+/* =========================================================
+   VALUES GRID
+========================================================= */
+
+.values-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(350px, 1fr)
+        );
+
+    gap: 25px;
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   VALUE CARD
+========================================================= */
+
+.value-card {
+
+    background: #ffffff;
+
+    border: 1px solid #d9dee3;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 4px 12px rgba(
+            0,
+            0,
+            0,
+            0.06
+        );
+
+}
+
+
+.value-card-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.value-number {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    min-width: 42px;
+
+    height: 42px;
+
+    padding: 0 8px;
+
+    border-radius: 8px;
+
+    background: #212529;
+
+    color: #ffffff;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+}
+
+
+.value-card h3 {
+
+    margin:
+        0 0 6px;
+
+    font-size: 1.25rem;
+
+}
+
+
+.value-card p {
+
+    margin: 0;
+
+    line-height: 1.5;
+
+    color: #626b73;
+
+}
+
+
+/* =========================================================
+   INTERACTIVE AREA
+========================================================= */
+
+.interactive-value {
+
+    width: 100%;
+
+}
+
+
+.electrical-interactive {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.value-controls {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+.value-control {
+
+    width: 100%;
+
+}
+
+
+.value-control-label {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 7px;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+}
+
+
+.value-control-number {
+
+    min-width: 70px;
+
+    text-align: right;
+
+    font-variant-numeric:
+        tabular-nums;
+
+}
+
+
+.value-control input[type="range"] {
+
+    width: 100%;
+
+    cursor: pointer;
+
+}
+
+
+.value-results {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(110px, 1fr)
+        );
+
+    gap: 10px;
+
+}
+
+
+.value-result {
+
+    padding: 13px;
+
+    background: #f1f3f5;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+}
+
+
+.value-result-label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: #6c757d;
+
+}
+
+
+.value-result-number {
+
+    display: block;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    font-variant-numeric:
+        tabular-nums;
+
+}
+
+
+.interactive-equation {
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: #212529;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 1rem;
+
+    overflow-x: auto;
+
+}
+
+
+/* =========================================================
+   ATOMIC STRUCTURE
+========================================================= */
+
+.interactive-atom {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.interactive-nucleus {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(35px, 35px)
+        );
+
+    justify-content: center;
+
+    gap: 5px;
+
+    width: 180px;
+
+    min-height: 100px;
+
+    padding: 15px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #e9ecef,
+            #ced4da
+        );
+
+}
+
+
+.proton,
+.neutron {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+}
+
+
+.proton {
+
+    background: #ffffff;
+
+    border: 2px solid #212529;
+
+}
+
+
+.neutron {
+
+    background: #adb5bd;
+
+    border: 2px solid #6c757d;
+
+    color: #ffffff;
+
+}
+
+
+.atom-particle-values {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 10px;
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+
+.atom-particle-values strong {
+
+    display: block;
+
+    font-size: 1.2rem;
+
+}
+
+
+/* =========================================================
+   AC WAVEFORM
+========================================================= */
+
+.ac-waveform {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 110px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: #f1f3f5;
+
+}
+
+
+.wave-line {
+
+    position: absolute;
+
+    left: -10%;
+
+    top: 50%;
+
+    width: 120%;
+
+    height: 2px;
+
+    border-radius: 50%;
+
+    background: #212529;
+
+    transform:
+        translateY(-50%)
+        rotate(-5deg);
+
+    animation:
+        waveMove
+        2s
+        linear
+        infinite;
+
+}
+
+
+@keyframes waveMove {
+
+    0% {
+
+        transform:
+            translateY(-50%)
+            translateX(0)
+            rotate(-5deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-50%)
+            translateX(-3%)
+            rotate(5deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-50%)
+            translateX(-6%)
+            rotate(-5deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   SCIENTIFIC CALCULATOR
+========================================================= */
+
+.calculator-section {
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    margin-bottom: 50px;
+
+}
+
+
+.calculator-header {
+
+    margin-bottom: 25px;
+
+}
+
+
+.calculator-header h2 {
+
+    margin:
+        10px 0;
+
+    color: #1f2933;
+
+    font-size: 2rem;
+
+}
+
+
+.calculator-header p {
+
+    margin: 0;
+
+    color: #4b5563;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   CALCULATOR BODY
+========================================================= */
+
+.scientific-calculator {
+
+    width:
+        min(
+            430px,
+            100%
+        );
+
+    margin: 0 auto;
+
+    padding: 18px;
+
+    background: #d6d9dc;
+
+    border:
+        2px solid #8a8f94;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 14px rgba(
+            0,
+            0,
+            0,
+            0.20
+        ),
+        inset 0 1px 0 rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+}
+
+
+/* =========================================================
+   CALCULATOR DISPLAY
+========================================================= */
+
+.calculator-display {
+
+    position: relative;
+
+    min-height: 105px;
+
+    margin-bottom: 15px;
+
+    padding:
+        12px 14px;
+
+    background: #b8c1b7;
+
+    border:
+        3px solid #555b55;
+
+    border-radius: 5px;
+
+    box-shadow:
+        inset 0 2px 5px rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+}
+
+
+.calculator-mode {
+
+    position: absolute;
+
+    top: 7px;
+
+    left: 10px;
+
+    color: #263026;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+
+.calculator-expression {
+
+    min-height: 25px;
+
+    margin-top: 18px;
+
+    color: #263026;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    text-align: right;
+
+    white-space: nowrap;
+
+    overflow-x: auto;
+
+}
+
+
+.calculator-result {
+
+    margin-top: 5px;
+
+    color: #111111;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 29px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+
+    text-align: right;
+
+    white-space: nowrap;
+
+    overflow-x: auto;
+
+}
+
+
+/* =========================================================
+   CALCULATOR BUTTON GRID
+========================================================= */
+
+.calculator-controls {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap: 8px;
+
+}
+
+
+/* =========================================================
+   CALCULATOR BUTTONS
+========================================================= */
+
+.calculator-button {
+
+    min-height: 48px;
+
+    padding:
+        7px 5px;
+
+    border:
+        1px solid #777777;
+
+    border-radius: 5px;
+
+    background: #e8e9e9;
+
+    color: #1f2933;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 2px rgba(
+            0,
+            0,
+            0,
+            0.20
+        );
+
+    transition:
+        transform 0.05s ease,
+        background 0.1s ease;
+
+}
+
+
+.calculator-button:hover {
+
+    background: #f3f4f4;
+
+}
+
+
+.calculator-button:active {
+
+    transform:
+        translateY(1px);
+
+    box-shadow:
+        inset 0 2px 3px rgba(
+            0,
+            0,
+            0,
+            0.20
+        );
+
+}
+
+
+/* =========================================================
+   NUMBER BUTTONS
+========================================================= */
+
+.number-button {
+
+    background: #f1f1f1;
+
+    color: #111111;
+
+}
+
+
+.number-button:hover {
+
+    background: #ffffff;
+
+}
+
+
+/* =========================================================
+   FUNCTION BUTTONS
+========================================================= */
+
+.function-button {
+
+    background: #c9cccf;
+
+    color: #20252a;
+
+}
+
+
+.function-button:hover {
+
+    background: #d9dcde;
+
+}
+
+
+/* =========================================================
+   OPERATOR BUTTONS
+========================================================= */
+
+.operator-button {
+
+    background: #bfc3c6;
+
+    color: #111111;
+
+    font-size: 18px;
+
+}
+
+
+.operator-button:hover {
+
+    background: #d0d3d5;
+
+}
+
+
+/* =========================================================
+   EQUALS BUTTON
+========================================================= */
+
+.calculator-button[data-action="equals"] {
+
+    background: #aeb4b8;
+
+    color: #111111;
+
+    font-size: 20px;
+
+}
+
+
+.calculator-button[data-action="equals"]:hover {
+
+    background: #c1c5c8;
+
+}
+
+
+/* =========================================================
+   2ND BUTTON ACTIVE
+========================================================= */
+
+.calculator-button.active {
+
+    background: #8e959a;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   MOBILE CALCULATOR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .calculator-section {
+
+        margin-top: 35px;
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .scientific-calculator {
+
+        width: 100%;
+
+        padding: 12px;
+
+    }
+
+
+    .calculator-controls {
+
+        gap: 6px;
+
+    }
+
+
+    .calculator-button {
+
+        min-height: 45px;
+
+        font-size: 14px;
+
+    }
+
+
+    .calculator-result {
+
+        font-size: 25px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .values-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .value-card {
+
+        padding: 18px;
+
+    }
+
+
+    .calculator-button {
+
+        min-height: 44px;
+
+        font-size: 0.8rem;
+
+    }
+
+
+    .calculator-display {
+
+        min-height: 100px;
+
+    }
+
+
+    .calculator-expression {
+
+        font-size: 0.8rem;
+
+    }
+
+
+    .calculator-result {
+
+        font-size: 1.25rem;
+
+    }
+
+}

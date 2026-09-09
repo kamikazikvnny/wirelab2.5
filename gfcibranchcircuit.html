@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WireLab - Virtual Electrical Training Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div>
+        <h1>WireLab</h1>
+        <p>Virtual Electrical Training Lab</p>
+    </div>
+
+    <nav class="site-navigation">
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="labs.html" class="nav-button">Labs</a>
+        <a href="study.html" class="nav-button">Study</a>
+        <a href="solarlab.html" class="nav-button">Info</a>
+        <a href="testing.html" class="nav-button">..testing</a>
+        <a href="electrical-tools.html" class="nav-button">Tools</a>
+    </nav>
+
+    <div class="stage-label">
+        STAGE 1.4B
+    </div>
+
+</header>
+
+<main class="page-container">
+
+    <!-- EXERCISE HEADER -->
+
+    <section class="exercise-header">
+
+        <div>
+            <span class="exercise-number">EXERCISE 01</span>
+
+            <h2>GFCI Branch Circuit Lab</h2>
+        </div>
+
+        <div class="exercise-actions">
+            <button id="startExercise">Start Exercise</button>
+            <button id="checkWork">Check Work</button>
+            <button id="resetExercise">Reset Exercise</button>
+        </div>
+
+    </section>
+
+
+    <!-- EXERCISE INFORMATION -->
+
+    <section class="exercise-info">
+
+        <div class="objective-card">
+
+            <h3>Objective</h3>
+
+            <p>
+                Build a basic GFCI-protected branch circuit using the correct
+                cables, wiring devices, switch, and lighting equipment.
+            </p>
+
+        </div>
+
+        <div class="progress-card">
+
+            <div class="progress-header">
+                <span>Exercise Progress</span>
+                <span id="exerciseProgress">0%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXERCISE STATUS -->
+
+    <div id="exerciseStatus" class="exercise-status">
+        Start the exercise when you are ready.
+    </div>
+
+
+    <!-- LAB -->
+
+    <section id="lab">
+
+        <!-- WORKSPACE -->
+
+        <div id="workspace-panel">
+
+            <!-- WORKBOARD -->
+
+            <div id="workboard">
+
+                <div class="workspace-title">
+                    <h3>Electrical Work Area</h3>
+                    <span>
+                        Drag boxes, devices, and cables into position.
+                    </span>
+                </div>
+
+
+                <!-- POWER SOURCE -->
+
+                <div id="wallOutlet" class="wall-outlet">
+
+                    <div class="wall-outlet-label">
+                        POWER SOURCE
+                    </div>
+
+                    <div class="wall-outlet-face">
+                        <div class="wall-outlet-screw top"></div>
+                        <div class="wall-outlet-screw bottom"></div>
+
+                        <div class="wall-outlet-slot hot-slot"></div>
+                        <div class="wall-outlet-slot neutral-slot"></div>
+
+                        <div class="wall-outlet-ground"></div>
+                    </div>
+
+                </div>
+
+
+                <!-- JUNCTION BOXES -->
+
+                <div id="junctionBoxes">
+
+                    <div
+                        class="junction-box"
+                        id="box1"
+                        data-box="1"
+                        style="left: 90px; top: 80px;"
+                    >
+                        <div class="box-label">J-BOX 1</div>
+
+                        <div class="knockout knockout-top" data-position="top"></div>
+                        <div class="knockout knockout-bottom" data-position="bottom"></div>
+                        <div class="knockout knockout-left" data-position="left"></div>
+                        <div class="knockout knockout-right" data-position="right"></div>
+                    </div>
+
+
+                    <div
+                        class="junction-box"
+                        id="box2"
+                        data-box="2"
+                        style="left: 340px; top: 80px;"
+                    >
+                        <div class="box-label">J-BOX 2</div>
+
+                        <div class="knockout knockout-top" data-position="top"></div>
+                        <div class="knockout knockout-bottom" data-position="bottom"></div>
+                        <div class="knockout knockout-left" data-position="left"></div>
+                        <div class="knockout knockout-right" data-position="right"></div>
+                    </div>
+
+
+                    <div
+                        class="junction-box"
+                        id="box3"
+                        data-box="3"
+                        style="left: 590px; top: 80px;"
+                    >
+                        <div class="box-label">J-BOX 3</div>
+
+                        <div class="knockout knockout-top" data-position="top"></div>
+                        <div class="knockout knockout-bottom" data-position="bottom"></div>
+                        <div class="knockout knockout-left" data-position="left"></div>
+                        <div class="knockout knockout-right" data-position="right"></div>
+                    </div>
+
+
+                    <div
+                        class="junction-box"
+                        id="box4"
+                        data-box="4"
+                        style="left: 215px; top: 285px;"
+                    >
+                        <div class="box-label">J-BOX 4</div>
+
+                        <div class="knockout knockout-top" data-position="top"></div>
+                        <div class="knockout knockout-bottom" data-position="bottom"></div>
+                        <div class="knockout knockout-left" data-position="left"></div>
+                        <div class="knockout knockout-right" data-position="right"></div>
+                    </div>
+
+
+                    <div
+                        class="junction-box"
+                        id="box5"
+                        data-box="5"
+                        style="left: 465px; top: 285px;"
+                    >
+                        <div class="box-label">J-BOX 5</div>
+
+                        <div class="knockout knockout-top" data-position="top"></div>
+                        <div class="knockout knockout-bottom" data-position="bottom"></div>
+                        <div class="knockout knockout-left" data-position="left"></div>
+                        <div class="knockout knockout-right" data-position="right"></div>
+                    </div>
+
+                </div>
+
+
+                <!-- CABLE LAYER -->
+
+                <svg
+                    id="cableLayer"
+                    aria-label="Electrical cable connections"
+                    role="presentation"
+                >
+                    <g id="cableHitLayer" aria-hidden="true"></g>
+                    <g id="cableVisibleLayer" aria-hidden="true"></g>
+                </svg>
+
+
+                <!-- POWER CORD LAYER -->
+
+                <div id="powerCordLayer"></div>
+
+            </div>
+
+
+            <!-- LAB CONTROLS -->
+
+            <section class="lab-controls">
+
+                <button id="addBox">Add J-Box</button>
+                <button id="removeBox">Delete</button>
+                <button id="resetLab">Reset Lab</button>
+
+            </section>
+
+
+            <!-- MESSAGE -->
+
+            <div id="message" class="message">
+                Select a component or cable to begin.
+            </div>
+
+
+            <!-- DEVICE HINTS -->
+
+            <section class="hint-panel">
+
+                <div class="hint-header">
+
+                    <div>
+                        <span class="hint-label">DEVICE HINT</span>
+
+                        <h3 id="hintDeviceName">
+                            Select a device
+                        </h3>
+                    </div>
+
+                    <span id="hintLevel">Hint 0</span>
+
+                </div>
+
+                <p id="hintText">
+                    Select a device in the workspace to see wiring information.
+                </p>
+
+                <div class="hint-actions">
+                    <button id="hintButton">Show Hint</button>
+                    <button id="nextHintButton">Next Hint</button>
+                </div>
+
+            </section>
+
+
+            <!-- INSTRUCTIONS -->
+
+            <section class="instructions-panel">
+
+                <h3>Quick Instructions</h3>
+
+                <ul>
+                    <li>
+                        Drag junction boxes to move them around the work area.
+                    </li>
+
+                    <li>
+                        Click a junction box to select it.
+                    </li>
+
+                    <li>
+                        Drag wiring devices into a junction box.
+                    </li>
+
+                    <li>
+                        Drag 14/2-wire or 14/3-wire cables to knockout openings.
+                    </li>
+
+                    <li>
+                        Drag the 3-prong appliance power cord to a knockout
+                        opening for its three-wire end.
+                    </li>
+
+                    <li>
+                        Connect the 3-prong plug to the dedicated wall outlet
+                        at the edge of the work area.
+                    </li>
+
+                    <li>
+                        The power cord provides hot, neutral, and ground
+                        through its three-wire end.
+                    </li>
+
+                    <li>
+                        Click compatible terminals and conductors to make
+                        wiring connections.
+                    </li>
+
+                    <li>
+                        Select a device and press Delete or Backspace to
+                        remove it.
+                    </li>
+
+                    <li>
+                        Install a bulb into a light fixture when available.
+                    </li>
+                </ul>
+
+            </section>
+
+        </div>
+
+
+        <!-- COMPONENT TOOLBOX -->
+
+        <aside id="toolbox">
+
+            <div class="toolbox-header">
+                <h2>Components</h2>
+
+                <p>
+                    Drag components into the work area.
+                </p>
+            </div>
+
+
+            <!-- CABLES -->
+
+            <section class="toolbox-section">
+
+                <h3>Cables</h3>
+
+                <div
+                    class="component cable-component"
+                    draggable="true"
+                    data-component="14/2-wire"
+                >
+                    <div class="component-icon cable-icon cable-2">
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <strong>14/2 - Wire Cable</strong>
+                        <small>Black + White + Ground</small>
+                    </div>
+                </div>
+
+
+                <div
+                    class="component cable-component"
+                    draggable="true"
+                    data-component="14/3 - Wire Cable"
+                >
+                    <div class="component-icon cable-icon cable-3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <strong>14/3 - Wire Cable</strong>
+                        <small>Black + Red + White + Ground</small>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- POWER SOURCES -->
+
+            <section class="toolbox-section">
+
+                <h3>Power Sources</h3>
+
+                <div
+                    class="component power-cord-component"
+                    draggable="true"
+                    data-component="appliance-power-cord"
+                >
+
+                    <div class="component-icon appliance-cord-icon">
+
+                        <div class="plug-head">
+                            <span class="plug-prong prong-top"></span>
+                            <span class="plug-prong prong-bottom"></span>
+                            <span class="plug-ground"></span>
+                        </div>
+
+                        <div class="plug-cable"></div>
+
+                        <div class="pigtail">
+                            <span class="pigtail-wire black"></span>
+                            <span class="pigtail-wire white"></span>
+                            <span class="pigtail-wire green"></span>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <strong>3-Prong Appliance Power Cord</strong>
+                        <small>Hot + Neutral + Ground</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- WIRING DEVICES -->
+
+            <section class="toolbox-section">
+
+                <h3>Wiring Devices</h3>
+
+                <div
+                    class="component"
+                    draggable="true"
+                    data-component="duplex-receptacle"
+                >
+                    <div class="component-icon duplex-icon">
+                        <div class="receptacle-slot"></div>
+                        <div class="receptacle-slot"></div>
+                    </div>
+
+                    <div>
+                        <strong>Duplex Receptacle</strong>
+                        <small>Standard receptacle</small>
+                    </div>
+                </div>
+
+
+                <div
+                    class="component"
+                    draggable="true"
+                    data-component="half-hot-receptacle"
+                >
+                    <div class="component-icon duplex-icon half-hot-icon">
+                        <div class="receptacle-slot"></div>
+                        <div class="receptacle-slot"></div>
+                    </div>
+
+                    <div>
+                        <strong>Half-Hot Receptacle</strong>
+                        <small>Split switched receptacle</small>
+                    </div>
+                </div>
+
+
+                <div
+                    class="component"
+                    draggable="true"
+                    data-component="gfci"
+                >
+                    <div class="component-icon gfci-icon">
+                        <div class="gfci-button">R</div>
+                        <div class="gfci-button">T</div>
+                    </div>
+
+                    <div>
+                        <strong>GFCI Receptacle</strong>
+                        <small>LINE + LOAD terminals</small>
+                    </div>
+                </div>
+
+
+                <div
+                    class="component"
+                    draggable="true"
+                    data-component="single-pole-switch"
+                >
+                    <div class="component-icon switch-icon">
+                        <div class="switch-toggle"></div>
+                    </div>
+
+                    <div>
+                        <strong>Single-Pole Switch</strong>
+                        <small>Hot in + switched hot out</small>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- LIGHTING -->
+
+            <section class="toolbox-section">
+
+                <h3>Lighting</h3>
+
+                <div
+                    class="component"
+                    draggable="true"
+                    data-component="light-fixture"
+                >
+                    <div class="component-icon fixture-icon">
+                        <div class="fixture-base"></div>
+                        <div class="fixture-globe"></div>
+                    </div>
+
+                    <div>
+                        <strong>Light Fixture</strong>
+                        <small>Hot + Neutral</small>
+                    </div>
+                </div>
+
+
+                <div
+                    class="component"
+                    draggable="true"
+                    data-component="light-bulb"
+                >
+                    <div class="component-icon bulb-icon">
+                        <div class="bulb-glass"></div>
+                        <div class="bulb-base"></div>
+                    </div>
+
+                    <div>
+                        <strong>Light Bulb</strong>
+                        <small>Installs into fixture</small>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- BOXES & ENCLOSURES -->
+
+            <section class="toolbox-section">
+
+                <h3>Boxes &amp; Enclosures</h3>
+
+                <div class="empty-category">
+                    No components available.
+                </div>
+
+            </section>
+
+
+            <!-- WIRING ACCESSORIES -->
+
+            <section class="toolbox-section">
+
+                <h3>Wiring Accessories</h3>
+
+                <div class="empty-category">
+                    No components available.
+                </div>
+
+            </section>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
