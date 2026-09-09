@@ -281,51 +281,9 @@
 
 
 /* =========================================================
-   10. MOBILE
+   11. MOBILE
 ========================================================= */
 
-@media (
-    max-width: 768px
-) {
-
-    .header-content h1 {
-
-        font-size: 2rem;
-    }
-
-
-    .hero-content h2 {
-
-        font-size: 2.2rem;
-    }
-
-
-    .hero-content p {
-
-        font-size: 1rem;
-    }
-
-
-    .content-section {
-
-        padding: 40px 15px;
-    }
-
-
-    .site-header {
-
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
-}
-
-
-
-
-
-   
 @media (
     max-width: 768px
 ) {
@@ -346,6 +304,12 @@
     }
 
 
+    .header-content h1 {
+
+        font-size: 2rem;
+    }
+
+
     .site-navigation {
 
         display: flex;
@@ -359,5 +323,22 @@
         gap: 5px;
     }
 
-}
+
+    .hero-content h2 {
+
+        font-size: 2.2rem;
+    }
+
+
+    .hero-content p {
+
+        font-size: 1rem;
+    }
+
+
+    .content-section {
+
+        padding: 40px 15px;
+    }
+
 }
